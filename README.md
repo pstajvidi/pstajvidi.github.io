@@ -1,2 +1,0 @@
-# pstajvidi.github.io
-website
