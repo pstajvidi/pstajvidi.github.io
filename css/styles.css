@@ -1,5 +1,43 @@
 body {
+    /*background*/
     background: -webkit-linear-gradient(bottom right, #7fa2e9, #ffadeb);
     background: -moz-linear-gradient(bottom right, #7fa2e9, #ffadeb);
     background: linear-gradient(to top left, #7fa2e9, #ffadeb);
   }
+
+  p{
+    /*element selector*/
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    font-weight: bold;
+    color: rgb(18, 44, 238);
+    /*sets color of text*/
+    text-indent: 0.5cm;
+    /* this is an absolute number*/
+  }
+
+  img.pom{
+    /*realtive number and sizing! and float tag*/
+    width: 30%;
+    height: 50%;
+    float: left;
+  }
+
+  #extra{
+    /*the id extra*/
+    background-color: rgb(213, 255, 151);
+    font-size: large;
+    font-weight: bold;
+    color:palevioletred;
+  }
+  
+  /*group selector*/ 
+ h1, h2, h3, h4, h5, h6 {
+  text-shadow: 2px 2px 3px rgb(255, 255, 255);
+  font-family:'Times New Roman', Times, serif;
+  color: rgb(217, 14, 122);
+  
+  }
+
+  
+
