@@ -1,8 +1,8 @@
 body {/* Requirement-2.A */
     /* Requirement-2.4 */
-      background: -webkit-linear-gradient(bottom right, #7fa2e9, #ffadeb);
-      background: -moz-linear-gradient(bottom right, #7fa2e9, #ffadeb);
-      background: linear-gradient(to top left, #7fa2e9, #ffadeb);
+      background: -webkit-linear-gradient(bottom right, #c9dbff, #ffd6f5);
+      background: -moz-linear-gradient(bottom right, #c9dbff, #ffd6f5);
+      background: linear-gradient(to top left, #c9dbff, #ffd6f5);
     }
   
     p{/* Requirement-2.A */
