@@ -1,8 +1,6 @@
 body {/* Requirement-2.A */
     /* Requirement-2.4 */
-      background: -webkit-linear-gradient(bottom right, #c9dbff, #ffd6f5);
-      background: -moz-linear-gradient(bottom right, #c9dbff, #ffd6f5);
-      background: linear-gradient(to top left, #c9dbff, #ffd6f5);
+      background-color: #201a1f;
     }
   
     p{/* Requirement-2.A */
@@ -39,9 +37,8 @@ body {/* Requirement-2.A */
   
    h1, h2, h3, h4, h5, h6 {/* Requirement-2.B */
     text-align: center;
-    text-shadow: 2px 2px 3px rgb(255, 255, 255);
     font-family:'Times New Roman', Times, serif;
-    color: rgb(217, 14, 122);
+    color: rgb(255, 130, 197);
     
     }
     details summary {/* Requirement-2.G */
@@ -72,8 +69,9 @@ body {/* Requirement-2.A */
       list-style-type:none;/* Requirement-2.8 */
       margin: 0;
       padding: 0;
+      border: #ddd;
       overflow: hidden;/* Requirement-2.14 */
-      background-color: rgb(173, 100, 241);
+      background-color: rgb(34, 21, 46);
       
       
     }
@@ -95,7 +93,7 @@ body {/* Requirement-2.A */
     }
     
     ul.menu li a:hover:not(.active) {
-      background-color: rgb(243, 168, 94);
+      background-color: rgb(76, 38, 0);
       
     }
     
@@ -103,7 +101,7 @@ body {/* Requirement-2.A */
       background-color: rgb(255, 39, 111);
     }
     ul.menu .activity{
-      background-color: rgb(111, 39, 255);
+      background-color: rgb(204, 180, 249);
     }
     ul.cont{
       list-style-type: square;
@@ -164,7 +162,7 @@ body {/* Requirement-2.A */
     }
     .prt2{
       padding:10px; 
-      border: 4px solid rgb(249, 144, 32);
+      border: 4px solid rgb(255, 238, 221);
       clear:inherit;/* Requirement-2.13 */
       width: 30%;
       height: 40%;
