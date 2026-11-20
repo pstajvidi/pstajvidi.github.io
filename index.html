@@ -2,42 +2,71 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>pegah tajvidi website</title>
-        <link rel="stylesheet" href="css/styles.css" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pegah Tajvidi · Research and software</title>
+        <link rel="stylesheet" href="style.css">
     </head>
-    
-     <!--Requirment-1.B-->
-     <header>
-        <!--Requirment-1.F-->
-       <h1>Pegah Tajvidi</h1>
-        
-       <!--Requirment-1.D-->
-      
-       <br>
-       <ul class="menu">
-           <li><a href="index.html">OG page</a></li>
-           <li><a href="addPages.html">Linked Page!</a></li>
-           <li><a href="https://www.google.com" target="_blank" class="active">Contact</a></li>
-           <li><a href="https://www.youtube.com/watch?v=g9gHC2quF3A&t=717s">click me maybe</a></li>
-         </ul>
-   </header>
-   <hr>
 
-    
-   <section>
-   
-   </section>
+    <body id="top">
+        <header class="wrap masthead">
+            <a class="brand" href="#top">Pegah Tajvidi</a>
+                <nav aria-label="Main navigation">
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                </nav>
+        </header>
+
+          <main id="main">
+    <section class="wrap hero" aria-labelledby="intro">
+      <div>
+        <p class="kicker">Computational social science</p>
+        <h1 id="intro">People, data,<br>and the <em>systems</em><br>between them.</h1>
+        <p class="lead">I’m June, a graduate researcher and software developer. I study how disease spreads through social networks, how facilities use electricity, and how software can help people do their work.</p>
+        <a class="button" href="#projects">Explore my projects</a>
+      </div>
+      <figure>
+        <img src="assets/contact-network.png" alt="An illustration of four clusters of interconnected nodes, joined by a few long links." width="880" height="680">
+        <figcaption>Contact networks <span>Conceptual illustration</span></figcaption>
+      </figure>
+    </section>
+    <section class="wrap work" id="projects" aria-labelledby="work-title">
+      <h2 id="work-title">Selected projects</h2>
+      <article>
+        <p class="field">Public health</p>
+        <div><h3>Simulating COVID-19 in Orange County</h3>
+          <p>How much does the shape of a social network change an epidemic simulation? I modeled transmission across different contact networks and compared the simulated outbreaks with historical county data.</p>
+          <details><summary>Modeling approach</summary><p>I used NetworkX to generate Barabási–Albert and Holme–Kim networks, then ran repeated agent-based simulations in Repast4py. Comparing 100-day trajectories let me examine how adding local clusters changed the shape of an outbreak.</p></details>
+        </div>
+      </article>
+      <article>
+        <p class="field">Energy systems</p>
+        <div><h3>Who generates their own electricity?</h3>
+          <p>At the Power Transformation Lab, I use federal energy records to identify commercial and industrial plants that may supply their own electricity and examine how they vary by state and fuel.</p>
+          <details><summary>Working with the data</summary><p>I organize EIA records into one row per plant per year. Sector codes help identify candidates. To estimate how much electricity a facility supplies for itself, I also need to account for power coming in and power used on site.</p></details>
+        </div>
+      </article>
+      <article>
+        <p class="field">Software engineering</p>
+        <div><h3>Kamino student data center</h3>
+          <p>Our team built a self-service portal for provisioning virtual machines for workshops and competitions. I contributed to the React and TypeScript interface, integration testing, and Kubernetes deployment.</p>
+          <details><summary>Inside the portal</summary><p>The frontend connects to a C++ API that manages virtual machines through Proxmox. My work included tracing requests across the interface and backend to debug integration issues before deployment.</p></details>
+        </div>
+      </article>
+    </section>
+    <div class="lower"><div class="wrap bio">
+      <section id="about" aria-labelledby="about-title"><h2 id="about-title">About me</h2>
+        <p>I have a bachelor’s degree in computer science and am pursuing a master’s in computational social science. At UCLA, I’ve worked on extracting speech and pause features from research videos for a study of older adults. At the Metropolitan Water District, I worked on data quality and reporting tools for laboratory teams.</p>
+      </section>
+      <section id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Get in touch</h2>
+        <p>I’m interested in research collaborations and software or data roles in public health.</p>
+        <!-- Replace the example email in both places before publishing. Add your GitHub, LinkedIn, or a public CV here. -->
+        <a class="contact" href="mailto:you@example.com">you@example.com</a>
+      </section>
+    </div></div>
+  </main>
+    </body>
 
 
-   <article> 
-       
-   </article>
-   
-   <footer id="extra">
-       This is the end of the page! pompompurin says goodbye!
-   </footer>
-   <img class= pom src="img/pumpum.png" alt="pompompurin">
-</body>
 </html>
