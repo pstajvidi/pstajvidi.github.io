@@ -8,35 +8,128 @@
   --serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
   --sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
 }
-* { 
-  box-sizing: border-box; 
+* { box-sizing: border-box; }
+
+body { 
+  margin: 0; 
+  background: 
+  var(--paper); 
+  color: var(--ink); 
+  font: 1rem/1.6 var(--sans); 
+
+}
+.wrap {
+   width: min(86%, 74rem); 
+   margin-inline: auto; 
   }
-  
-body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.6 var(--sans); }
-.wrap { width: min(86%, 74rem); margin-inline: auto; }
-a { color: inherit; text-underline-offset: .25em; }
-a:hover, summary:hover { color: var(--accent); }
-:focus-visible { outline: 3px solid #7860bd; outline-offset: 4px; }
-.skip { position: absolute; inset: .5rem auto auto .5rem; transform: translateY(-180%); padding: .5rem; background: white; }
-.skip:focus { transform: none; }
-.masthead, nav, footer, figcaption { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.masthead { min-height: 5rem; border-bottom: 1px solid var(--rule); }
-.brand { font: bold 1.45rem var(--serif); letter-spacing: -.05em; text-decoration: none; }
-nav { gap: clamp(.8rem, 3vw, 2.1rem); }
-nav a, footer a { font-size: .94rem; text-decoration: none; }
-nav a:hover, footer a:hover { text-decoration: underline; }
-.hero { display: grid; grid-template-columns: 1.06fr 1fr; gap: 6%; align-items: center; padding-block: clamp(3rem, 6vw, 6rem); }
-.kicker, .field, figcaption { font: .83rem/1.5 "IBM Plex Mono", ui-monospace, monospace; }
-.kicker { text-transform: uppercase; letter-spacing: .09em; color: var(--accent); margin: 0 0 1.3rem; }
-h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; }
-h1 { font-size: clamp(3.4rem, 5.8vw, 5.7rem); line-height: .99; letter-spacing: -.065em; }
-h1 em { color: var(--accent); }
-.lead { font-size: clamp(1rem, 1.35vw, 1.16rem); color: var(--muted); max-width: 49ch; margin: 1.5rem 0; }
-.button { display: inline-block; padding: .68rem 1.2rem; border-radius: .22rem; background: var(--ink); color: white; font-weight: 600; text-decoration: none; }
-.button:hover { color: white; background: var(--accent); }
-figure { margin: 0; background: #dedaf6; border: 1px solid #b9b2cc; }
-figure img { display: block; width: 100%; height: auto; }
-figcaption { flex-wrap: wrap; padding: .66rem .9rem; color: #39324f; border-top: 1px solid #b9b2cc; }
+a { 
+  color: inherit; 
+  text-underline-offset: .25em; 
+}
+a:hover, summary:hover { 
+  color: var(--accent); 
+}
+:focus-visible { 
+  outline: 3px solid #7860bd; 
+  outline-offset: 4px; 
+}
+.skip { 
+  position: absolute; 
+  inset: .5rem auto auto .5rem; 
+  transform: translateY(-180%); 
+  padding: .5rem; 
+  background: white; 
+}
+.skip:focus { 
+  transform: none; 
+}
+.masthead, nav, footer, figcaption { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 1rem; 
+}
+.masthead { 
+  min-height: 5rem; 
+  border-bottom: 1px solid var(--rule); 
+}
+.brand { 
+  font: bold 1.45rem var(--serif); 
+  letter-spacing: -.05em; text-decoration: none; 
+}
+
+nav { 
+  gap: clamp(.8rem, 3vw, 2.1rem); 
+}
+nav a, footer a { 
+  font-size: .94rem;
+  text-decoration: none; 
+}
+nav a:hover, footer a:hover { 
+  text-decoration: underline; 
+}
+.hero { 
+  display: grid; 
+  grid-template-columns: 1.06fr 1fr;
+   gap: 6%; 
+   align-items: center;
+  padding-block: clamp(3rem, 6vw, 6rem); 
+}
+.kicker, .field, figcaption { 
+  font: .83rem/1.5 "IBM Plex Mono", ui-monospace, monospace; 
+}
+.kicker { 
+  text-transform: uppercase; 
+  letter-spacing: .09em; color: var(--accent); 
+  margin: 0 0 1.3rem; 
+}
+
+h1, h2, h3 { 
+  font-family: var(--serif); 
+  font-weight: 400; 
+  margin: 0; 
+}
+h1 { 
+  font-size: clamp(3.4rem, 5.8vw, 5.7rem); 
+  line-height: .99; letter-spacing: -.065em; 
+}
+h1 em { 
+  color: var(--accent); 
+}
+.lead { 
+  font-size: clamp(1rem, 1.35vw, 1.16rem); 
+  color: var(--muted); 
+  max-width: 49ch; margin: 1.5rem 0;
+}
+.button { 
+  display: inline-block; 
+  padding: .68rem 1.2rem; 
+  border-radius: .22rem;
+   background: var(--ink); 
+   color: white; 
+   font-weight: 600; 
+   text-decoration: none; 
+  }
+.button:hover { 
+  color: white; 
+  background: var(--accent);
+ }
+figure { 
+  margin: 0; 
+  background: #dedaf6; 
+  border: 1px solid #b9b2cc; 
+}
+figure img { 
+  display: block; 
+  width: 100%; 
+  height: auto; 
+}
+figcaption { 
+  flex-wrap: wrap; 
+  padding: .66rem .9rem; 
+  color: #39324f; 
+  border-top: 1px solid #b9b2cc;
+}
 figcaption span { font-style: italic; }
 h2 { font-size: clamp(2.5rem, 4.3vw, 3.8rem); letter-spacing: -.055em; line-height: 1.15; }
 .work { padding-bottom: clamp(3rem, 6vw, 5rem); }
