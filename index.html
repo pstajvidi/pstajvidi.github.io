@@ -1,72 +1,174 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Pegah Tajvidi · Research and software</title>
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pegah Tajvidi: software and research</title>
+<meta name="description" content="Software engineer and computational social science graduate student. Full-stack projects, research, and resume.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
 
-    <body id="top">
-        <header class="wrap masthead">
-            <!-- <a class="brand" href="#top">Pegah Tajvidi</a> -->
-                <nav aria-label="Main navigation">
-                <a href="#projects">Projects</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                </nav>
-        </header>
+<body id="top">
+<main>
 
-          <main id="main">
-    <section class="wrap hero" aria-labelledby="intro">
-        <div>
-        <p class="kicker">Computational social science</p>
-        <!-- <h1 id="intro">People, data,<br>and the <em>systems</em><br>between them.</h1> -->
-        <p class="lead">I’m Pegah.</p>
-        <a class="button" href="#projects">Explore my projects</a>
-      </div> 
-      <figure>
-        <!-- <img src="assets/contact-network.png" alt="An illustration of four clusters of interconnected nodes, joined by a few long links." width="880" height="680"> -->
-        <figcaption>Contact networks <span>Conceptual illustration</span></figcaption>
-      </figure>
-    </section>
-    <section class="wrap work" id="projects" aria-labelledby="work-title">
-      <h2 id="work-title">Selected projects</h2>
-      <article>
-        <p class="field">Public health</p>
-        <div><h3>Simulating COVID-19 in Orange County</h3>
-          <p>How much does the shape of a social network change an epidemic simulation? I modeled transmission across different contact networks and compared the simulated outbreaks with historical county data.</p>
-          <details><summary>Modeling approach</summary><p>I used NetworkX to generate Barabási–Albert and Holme–Kim networks, then ran repeated agent-based simulations in Repast4py. Comparing 100-day trajectories let me examine how adding local clusters changed the shape of an outbreak.</p></details>
+  <!-- Hero -->
+  <section class="wrap hero" aria-labelledby="intro">
+    <div class="hero-panel">
+      <div>
+        <h1 id="intro">Hi, I’m Pegah. I build software and untangle messy data.</h1>
+        <p class="intro">I’m finishing an M.S. in computational social science (June 2027) after a B.S. in computer science. I enjoy full-stack projects, research on real-world datasets, and explaining hard ideas to other people.</p>
+        <div class="buttons">
+          <a class="btn solid" href="#work">See my work</a>
+          <a class="btn line" href="resume.pdf">Download resume</a>
+          <a class="btn line" href="#contact">Say hello</a>
         </div>
-      </article>
-      <article>
-        <p class="field">Energy systems</p>
-        <div><h3>Who generates their own electricity?</h3>
-          <p>At the Power Transformation Lab, I use federal energy records to identify commercial and industrial plants that may supply their own electricity and examine how they vary by state and fuel.</p>
-          <details><summary>Working with the data</summary><p>I organize EIA records into one row per plant per year. Sector codes help identify candidates. To estimate how much electricity a facility supplies for itself, I also need to account for power coming in and power used on site.</p></details>
-        </div>
-      </article>
-      <article>
-        <p class="field">Software engineering</p>
-        <div><h3>Kamino student data center</h3>
-          <p>Our team built a self-service portal for provisioning virtual machines for workshops and competitions. I contributed to the React and TypeScript interface, integration testing, and Kubernetes deployment.</p>
-          <details><summary>Inside the portal</summary><p>The frontend connects to a C++ API that manages virtual machines through Proxmox. My work included tracing requests across the interface and backend to debug integration issues before deployment.</p></details>
-        </div>
-      </article>
-    </section>
-    <div class="lower"><div class="wrap bio">
-      <section id="about" aria-labelledby="about-title"><h2 id="about-title">About me</h2>
-        <p>I have a bachelor’s degree in computer science and am pursuing a master’s in computational social science. At UCLA, I’ve worked on extracting speech and pause features from research videos for a study of older adults. At the Metropolitan Water District, I worked on data quality and reporting tools for laboratory teams.</p>
-      </section>
-      <section id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Get in touch</h2>
-        <p>I’m interested in research collaborations and software or data roles in public health.</p>
-        <!-- Replace the example email in both places before publishing. Add your GitHub, LinkedIn, or a public CV here. -->
-        <a class="contact" href="mailto:you@example.com">you@example.com</a>
-      </section>
-    </div></div>
-  </main>
-    </body>
+      </div>
+      <div class="photo">
+        <!-- To use a real photo, replace the div below with: <div class="avatar"><img src="assets/me.jpg" alt="Pegah smiling"></div> -->
+        <div class="avatar" role="img" aria-label="Placeholder for a photo of Pegah">PT</div>
+        <div class="note"><b>Right now</b>Thesis on how U.S. businesses generate their own electricity</div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Work -->
+  <section class="wrap" id="work" aria-labelledby="work-title">
+    <h2 id="work-title">Things I’ve built</h2>
+    <div class="work-grid">
 
+      <article class="tile feature">
+        <h3>AI Narration</h3>
+        <p class="lede">A web app that turns text and documents into spoken narration. Long audio jobs run in a background worker, so the site stays quick while they finish.</p>
+        <div class="cols">
+          <ul>
+            <li>TypeScript monorepo with a React frontend, an Express API, and a worker service</li>
+            <li>Connects to OpenAI, ElevenLabs, Google Cloud Text-to-Speech, and a local XTTS model</li>
+          </ul>
+          <ul>
+            <li>Clerk sign-in, with types shared across all services</li>
+            <li>Vitest unit tests and Playwright end-to-end tests</li>
+          </ul>
+        </div>
+        <p class="stack">TypeScript, React, Node/Express, MongoDB, Docker, FFmpeg · <a href="https://github.com/your-username/ai-narration">View on GitHub</a></p>
+      </article>
+
+      <article class="tile t2">
+        <h3>Kamino</h3>
+        <p>A student data center portal. Users spin up and tear down virtual machine labs for workshops and competitions, with no manual setup.</p>
+        <p>Containerized with Docker and deployed on Kubernetes, which cut deployment time from hours to minutes.</p>
+        <p class="stack">TypeScript, Docker, Kubernetes, Proxmox</p>
+      </article>
+
+      <article class="tile t3">
+        <h3>Water quality reporting app</h3>
+        <p>A desktop app that moved lab data out of legacy databases and flags suspicious entries for an administrator to approve before reports go out.</p>
+        <p>Improved the team’s efficiency by 20–30%.</p>
+        <p class="stack">C#, WPF/MVVM, SQL</p>
+      </article>
+
+      <article class="tile t4">
+        <h3>Feral Forest</h3>
+        <p>A Metroidvania platformer I co-developed, with 3 levels, 2 bosses, and areas you unlock by earning new abilities. I built the coin economy, the skill-unlock system, the menus, and the HUD.</p>
+        <p class="stack">Unity 6, C#</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section class="wrap rows" id="research" aria-labelledby="research-title">
+    <h2 id="research-title">Research</h2>
+    <article>
+      <div>
+        <h3>Graduate thesis</h3>
+        <p class="where">University of California</p>
+      </div>
+      <ul>
+        <li>Studying which U.S. commercial and industrial plants generate their own electricity, using federal EIA and PUDL data.</li>
+        <li>Cleaning plant-by-year records and summarizing them by state, sector, and fuel, working toward a dashboard.</li>
+        <li>Exploring how data center demand relates to on-site power, grid reliability, and emissions.</li>
+      </ul>
+    </article>
+    <article>
+      <div>
+        <h3>Speech and cognitive health</h3>
+        <p class="where">UCLA, research volunteer</p>
+      </div>
+      <ul>
+        <li>Built a Python pipeline that cleans up patient audio, transcribes it, and separates speakers.</li>
+        <li>Compared speech recognition models (Whisper and NVIDIA Parakeet) to find the best fit, then measured pauses and articulation for a study of cognitive impairment and frailty.</li>
+      </ul>
+    </article>
+    <article>
+      <div>
+        <h3>COVID-19 network simulations</h3>
+        <p class="where">Cal Poly, undergraduate research</p>
+      </div>
+      <ul>
+        <li>Simulated how an epidemic spreads through different kinds of social networks, using Python and Repast4py.</li>
+        <li>Compared the simulations with real Orange County data and helped write the research paper.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- Experience -->
+  <section class="wrap rows" id="experience" aria-labelledby="exp-title">
+    <h2 id="exp-title">Where I’ve worked</h2>
+    <article>
+      <div>
+        <h3>Data management and QA co-op</h3>
+        <p class="where">Metropolitan Water District of Southern California</p>
+      </div>
+      <ul>
+        <li>Moved key reporting tools for the chemistry and compliance teams off legacy systems.</li>
+        <li>Built a shared library for standard operating procedures, with versioning and distribution across teams.</li>
+        <li>Tested lab and data management software, and worked with databases holding 20+ years of operational history.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- About -->
+  <section class="wrap about" id="about" aria-labelledby="about-title">
+    <div>
+      <h2 id="about-title">A little more about me</h2>
+      <p>I like work where careful engineering helps someone understand something new, whether that’s a lab chemist trusting a report or a reader finding the right answer.</p>
+      <p>I also tutor classmates, which is where I learned the most about explaining things clearly. I’m always happy to talk about research, software, or a good study strategy.</p>
+    </div>
+    <div>
+      <div class="skillgroup">
+        <h3>Languages</h3>
+        <ul class="chips"><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>C#</li></ul>
+      </div>
+      <div class="skillgroup">
+        <h3>Tools</h3>
+        <ul class="chips"><li>React</li><li>Node/Express</li><li>MongoDB</li><li>Docker</li><li>Kubernetes</li><li>Git</li><li>Playwright</li></ul>
+      </div>
+      <div class="skillgroup">
+        <h3>AI and data</h3>
+        <ul class="chips"><li>OpenAI API</li><li>Whisper</li><li>pandas</li><li>FFmpeg</li><li>Agent-based modeling</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="wrap" id="contact" aria-labelledby="contact-title">
+    <div class="contact-panel">
+      <h2 id="contact-title">Let’s talk</h2>
+      <p>I’m looking for software or data roles, and I’d love to hear about research collaborations too. The fastest way to reach me is email.</p>
+      <!-- Replace the email, GitHub, and LinkedIn links before publishing. -->
+      <a class="big" href="mailto:you@example.com">you@example.com</a>
+      <div class="links">
+        <a href="https://github.com/your-username">GitHub</a>
+        <a href="https://www.linkedin.com/in/your-username">LinkedIn</a>
+        <a href="resume.pdf">Resume (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="wrap">© 2026 Pegah Tajvidi</footer>
+</body>
 </html>
